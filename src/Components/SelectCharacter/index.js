@@ -65,7 +65,7 @@ const SelectCharacter = ({ setCharacterNFT }) => {
         gameContract.off("CharacterNFTMinted", onCharacterMint);
       }
     };
-  }, [gameContract]);
+  }, [gameContract, mintingCharacter]);
 
   useEffect(() => {
     const { ethereum } = window;
@@ -97,11 +97,13 @@ const SelectCharacter = ({ setCharacterNFT }) => {
         console.log("Minting character in progress...");
         const mintTxn = await gameContract.mintCharacterNFT(characterId);
         await mintTxn.wait();
+      
         console.log(mintTxn);
+        setMintingCharacter(false);
         /*
          * Hide our loading indicator when minting is finished
          */
-        setMintingCharacter(false);
+        
       }
     } catch (error) {
       console.warn("MintCharacterAction Error:", error);
@@ -140,7 +142,7 @@ const SelectCharacter = ({ setCharacterNFT }) => {
         />
       </div>
     )}
-    <div className={ mintingCharacter ? "select-character-container blur" :"select-character-container"}>
+    <div className={ !mintingCharacter ? "select-character-container " : "select-character-container blur"}>
       
       <h2>Mint Your Hero. Choose wisely.</h2>
       {characters.length > 0 && (

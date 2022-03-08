@@ -118,7 +118,7 @@ const App = () => {
       return (
         <div className="connect-wallet-container">
           <img
-            src="https://64.media.tumblr.com/tumblr_mbia5vdmRd1r1mkubo1_500.gifv"
+            src="./avengers-ready.gif"
             alt="Monty Python Gif"
           />
           <button

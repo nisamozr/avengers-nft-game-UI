@@ -123,7 +123,7 @@ const Arena = ({ characterNFT, setCharacterNFT }) => {
           </div>
         )}
 
-      <div className={attackState ? "arena-container hide" : "arena-container"}>
+      <div className={attackState  === "attacking" ? "arena-container hide" : "arena-container"}>
 
         {/* Boss */}
         {boss && (
