@@ -1,4 +1,4 @@
-# live https://bafybeihqso4bgfz476pambp3ov3lug5xk2umsbritld4nu2qurnda24o74.ipfs.infura-ipfs.io/
+# live https://bafybeiefrwm3pat7qo2q2sw4xltsefalfpnlmu4x75euq3wnbpzjbff4ze.ipfs.infura-ipfs.io/
 
 # buildspace NFT Game Project
 
